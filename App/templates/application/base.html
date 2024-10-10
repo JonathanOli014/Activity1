@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Oli</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'home' %}">Home</a><span>&nbsp;&nbsp;&nbsp;</span>
+        <a href="{% url 'about' %}">About</a><span>&nbsp;&nbsp;&nbsp;</span>
+        <a href="{% url 'schedule' %}">Schedule</a><span>&nbsp;&nbsp;&nbsp;</span>
+        <a href="{% url 'portfolio' %}">Portfolio</a>
+    </header>
+
+    {% block content %}
+    
+    {% endblock content %}
+
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>

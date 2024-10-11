@@ -9,12 +9,7 @@
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
 </head>
 <body>
-    <header>
-        <a href="{% url 'home' %}">Home</a><span>&nbsp;&nbsp;&nbsp;</span>
-        <a href="{% url 'about' %}">About</a><span>&nbsp;&nbsp;&nbsp;</span>
-        <a href="{% url 'schedule' %}">Schedule</a><span>&nbsp;&nbsp;&nbsp;</span>
-        <a href="{% url 'portfolio' %}">Portfolio</a>
-    </header>
+    {% include 'application/navbar.html' %}
 
     {% block content %}
     
